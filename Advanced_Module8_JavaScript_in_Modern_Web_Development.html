@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Module 8 - JavaScript in Modern Web Development</title>
+<style>
+body { font-family: Arial, sans-serif; background: #f4f7fb; color: #111827; margin: 0; padding: 20px; }
+.container { max-width: 900px; background: #fff; margin: auto; padding: 28px; border-radius: 12px; box-shadow: 0 15px 35px rgba(15,23,42,.08); }
+h1,h2 { color: #0f172a; }
+pre { background: #eef2ff; padding: 16px; border-radius: 10px; overflow-x: auto; }
+code { font-family: Consolas, Monaco, monospace; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Advanced Module 8: JavaScript in Modern Web Development</h1>\n        <h2>Theory</h2>\n        <p>Is page ka purpose aur module ki basic theory yahan diya gaya hai, jisse aap asan tareeke se samajh sakein.</p>
+<p>Is module mein PWAs, WebAssembly, aur Node.js ke advanced use cases seekhenge.</p>
+<h2>Topics</h2>
+<ul>
+<li>Progressive Web Apps (PWA) basics</li>
+<li>Service workers, caching, offline support</li>
+<li>WebAssembly introduction</li>
+<li>JavaScript and WebAssembly interoperability</li>
+<li>Node.js advanced patterns</li>
+<li>Asynchronous streams aur scalable backends</li>
+</ul>
+<h2>Practice Tasks</h2>
+<ol>
+<li>PWA ke core features note karo.</li>
+<li>WebAssembly use cases samjho.</li>
+<li>Simple Node.js backend pattern likho.</li>
+</ol>
+<h2>Example</h2>
+<pre><code>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js')
+    .then(() =&gt; console.log('Service worker registered'))
+    .catch(err =&gt; console.error(err));
+}
+
+// Node.js example
+// const http = require('http');
+// http.createServer((req, res) =&gt; res.end('Hello')).listen(3000);
+</code></pre>
+</div>
+</body>
+</html>

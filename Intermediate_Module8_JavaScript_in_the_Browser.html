@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intermediate Module 8 - JavaScript in the Browser</title>
+<style>
+body { font-family: Arial, sans-serif; background: #f4f7fb; color: #111827; margin: 0; padding: 20px; }
+.container { max-width: 900px; background: #fff; margin: auto; padding: 28px; border-radius: 12px; box-shadow: 0 15px 35px rgba(15,23,42,.08); }
+h1,h2 { color: #0f172a; }
+pre { background: #eef2ff; padding: 16px; border-radius: 10px; overflow-x: auto; }
+code { font-family: Consolas, Monaco, monospace; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Intermediate Module 8: JavaScript in the Browser</h1>\n        <h2>Theory</h2>\n        <p>Is page ka purpose aur module ki basic theory yahan diya gaya hai, jisse aap asan tareeke se samajh sakein.</p>
+<p>Is module mein advanced DOM, Web APIs aur web components pe focus hai.</p>
+<h2>Topics</h2>
+<ul>
+<li>DOM optimization aur performance</li>
+<li>Virtual DOM concept</li>
+<li>Complex form handling aur validation</li>
+<li>Canvas API</li>
+<li>Web Storage API</li>
+<li>Custom events, throttling, debouncing</li>
+<li>Web components aur Shadow DOM</li>
+<li>Custom elements banana</li>
+</ul>
+<h2>Practice Tasks</h2>
+<ol>
+<li>Form submit handling aur validation likho.</li>
+<li>Custom event dispatch aur listener implement karo.</li>
+<li>Simple custom element define karo.</li>
+</ol>
+<h2>Example</h2>
+<pre><code>class MyBox extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = '&lt;div style="padding:10px;border:1px solid #333;"&gt;Hello Web Component&lt;/div&gt;';
+  }
+}
+customElements.define('my-box', MyBox);
+
+const input = document.querySelector('#email');
+input.addEventListener('input', function() {
+  console.log('Input changed:', input.value);
+});
+</code></pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3 - Control Flow</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f4f7fb; color: #111827; }
+        .container { max-width: 900px; margin: 0 auto; background: #ffffff; border-radius: 12px; padding: 28px; box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08); }
+        h1, h2 { color: #0f172a; }
+        pre { background: #eef2ff; padding: 16px; border-radius: 10px; overflow-x: auto; }
+        code { font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Module 3: Control Flow</h1>
+        <h2>Theory</h2>
+        <p>Is module mein conditional statements aur loops seekhenge, jo program ko decision lene mein madad karte hain.</p>
+
+        <h2>Topics</h2>
+        <ul>
+            <li>if, else if, else</li>
+            <li>Ternary operator</li>
+            <li>switch statement</li>
+            <li>for, while, do...while loops</li>
+            <li>for...in aur for...of loops</li>
+            <li>break aur continue</li>
+        </ul>
+
+        <h2>Practice Tasks</h2>
+        <ol>
+            <li>Ek conditional script likhein jo age check kare aur message print kare <code>if</code>/<code>else</code> se.</li>
+            <li>Ternary operator use karke ek short condition likhein aur result console mein dekhein.</li>
+            <li>Loop banayein jo 1 se 10 tak numbers console kare, aur <code>break</code> aur <code>continue</code> ka use karein.</li>
+        </ol>
+
+        <h2>Example</h2>
+        <pre><code>let age = 20;
+if (age >= 18) {
+  console.log('Aap vote de sakte ho');
+} else {
+  console.log('Aap abhi chhote ho');
+}
+
+let message = age >= 18 ? 'Adult' : 'Minor';
+console.log(message);
+
+for (let i = 1; i <= 10; i++) {
+  if (i === 5) continue;
+  console.log(i);
+}</code></pre>
+    </div>
+</body>
+</html>

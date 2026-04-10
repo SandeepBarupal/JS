@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intermediate Module 6 - Error Handling and Debugging</title>
+<style>
+body { font-family: Arial, sans-serif; background: #f4f7fb; color: #111827; margin: 0; padding: 20px; }
+.container { max-width: 900px; background: #fff; margin: auto; padding: 28px; border-radius: 12px; box-shadow: 0 15px 35px rgba(15,23,42,.08); }
+h1,h2 { color: #0f172a; }
+pre { background: #eef2ff; padding: 16px; border-radius: 10px; overflow-x: auto; }
+code { font-family: Consolas, Monaco, monospace; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Intermediate Module 6: Error Handling and Debugging</h1>\n        <h2>Theory</h2>\n        <p>Is page ka purpose aur module ki basic theory yahan diya gaya hai, jisse aap asan tareeke se samajh sakein.</p>
+<p>Is module mein advanced error patterns, debugging tools, aur testing basics practice karenge.</p>
+<h2>Topics</h2>
+<ul>
+<li>Custom error objects</li>
+<li>Synchronous vs asynchronous errors</li>
+<li><code>try...catch...finally</code> patterns</li>
+<li>Advanced browser devtools debugging</li>
+<li>Performance profiling aur memory analysis</li>
+<li>Call stack analysis</li>
+<li>Unit testing introduction with Jest/Mocha</li>
+<li>TDD basics</li>
+</ul>
+<h2>Practice Tasks</h2>
+<ol>
+<li>Custom error object banayein aur throw/catch se handle karein.</li>
+<li>Async function mein error handling implement karo.</li>
+<li>Basic Jest/Mocha test case likho.</li>
+</ol>
+<h2>Example</h2>
+<pre><code>class ValidationError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = 'ValidationError';
+  }
+}
+
+function validateAge(age) {
+  if (age &lt; 18) {
+    throw new ValidationError('Age must be 18 or older');
+  }
+  return true;
+}
+
+try {
+  validateAge(16);
+} catch (error) {
+  console.error(error.name + ': ' + error.message);
+} finally {
+  console.log('Validation complete');
+}
+</code></pre>
+</div>
+</body>
+</html>

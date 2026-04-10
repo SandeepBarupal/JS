@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intermediate Module 10 - Intermediate JavaScript Project</title>
+<style>
+body { font-family: Arial, sans-serif; background: #f4f7fb; color: #111827; margin: 0; padding: 20px; }
+.container { max-width: 900px; background: #fff; margin: auto; padding: 28px; border-radius: 12px; box-shadow: 0 15px 35px rgba(15,23,42,.08); }
+h1,h2 { color: #0f172a; }
+pre { background: #eef2ff; padding: 16px; border-radius: 10px; overflow-x: auto; }
+code { font-family: Consolas, Monaco, monospace; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Intermediate Module 10: Intermediate JavaScript Project</h1>\n        <h2>Theory</h2>\n        <p>Is page ka purpose aur module ki basic theory yahan diya gaya hai, jisse aap asan tareeke se samajh sakein.</p>
+<p>Is module mein ek intermediate-level project plan karenge, build karenge, optimize karenge, aur deploy karenge.</p>
+<h2>Topics</h2>
+<ul>
+<li>Project scope aur objectives define karna</li>
+<li>Technologies aur tools choose karna</li>
+<li>Maintainable codebase structure</li>
+<li>Advanced JavaScript features implement karna</li>
+<li>API integration aur async data handling</li>
+<li>Cross-browser compatibility</li>
+<li>Performance optimization</li>
+<li>Production deployment</li>
+</ul>
+<h2>Practice Tasks</h2>
+<ol>
+<li>Project idea choose karo aur features list create karo.</li>
+<li>Project structure banayein aur core functionality implement karo.</li>
+<li>Build tools aur deployment options explore karo.</li>
+</ol>
+<h2>Example</h2>
+<pre><code>// Example: simple todo app add function
+const todoInput = document.querySelector('#todoInput');
+const addBtn = document.querySelector('#addBtn');
+const todoList = document.querySelector('#todoList');
+addBtn.addEventListener('click', () => {
+  const text = todoInput.value.trim();
+  if (text) {
+    const item = document.createElement('li');
+    item.textContent = text;
+    todoList.appendChild(item);
+    todoInput.value = '';
+  }
+});
+</code></pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 4 - Functions</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f4f7fb; color: #111827; }
+        .container { max-width: 900px; margin: 0 auto; background: #ffffff; border-radius: 12px; padding: 28px; box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08); }
+        h1, h2 { color: #0f172a; }
+        pre { background: #eef2ff; padding: 16px; border-radius: 10px; overflow-x: auto; }
+        code { font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Module 4: Functions</h1>
+        <h2>Theory</h2>
+        <p>Is module mein functions, closures aur alag tarah ke function expressions ko dekhenge.</p>
+
+        <h2>Topics</h2>
+        <ul>
+            <li>Function define aur call karna</li>
+            <li>Parameters, arguments, return values</li>
+            <li>Anonymous functions aur arrow functions</li>
+            <li>IIFE (Immediately Invoked Function Expressions)</li>
+            <li>Scope: local vs global</li>
+            <li>Closures ka introduction</li>
+        </ul>
+
+        <h2>Practice Tasks</h2>
+        <ol>
+            <li>Ek function banayein jo do numbers add kare aur result return kare.</li>
+            <li>Arrow function aur anonymous function dono se same task karein.</li>
+            <li>Ek closure banayein jisme outer function ek value rakhe aur inner function use access kare.</li>
+        </ol>
+
+        <h2>Example</h2>
+        <pre><code>function add(a, b) {
+  return a + b;
+}
+console.log(add(5, 7));
+
+const multiply = (x, y) => x * y;
+console.log(multiply(3, 4));
+
+const counter = (function() {
+  let count = 0;
+  return function() {
+    count++;
+    console.log('Count:', count);
+  };
+})();
+
+counter();
+counter();</code></pre>
+    </div>
+</body>
+</html>

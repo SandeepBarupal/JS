@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 9 - Debugging and Best Practices</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f4f7fb; color: #111827; }
+        .container { max-width: 900px; margin: 0 auto; background: #ffffff; border-radius: 12px; padding: 28px; box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08); }
+        h1, h2 { color: #0f172a; }
+        pre { background: #eef2ff; padding: 16px; border-radius: 10px; overflow-x: auto; }
+        code { font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Module 9: Debugging and Best Practices</h1>\n        <h2>Theory</h2>\n        <p>Is page ka purpose aur module ki basic theory yahan diya gaya hai, jisse aap asan tareeke se samajh sakein.</p>
+        <p>Is module mein JavaScript debug karna aur clean code likhne ki habits seekhenge.</p>
+
+        <h2>Topics</h2>
+        <ul>
+            <li>Browser developer tools se debugging</li>
+            <li><code>console.log</code>, <code>console.warn</code>, <code>console.error</code>, <code>console.table</code></li>
+            <li>Breakpoints aur step-through debugging</li>
+            <li>Clean code likhna, commenting, documentation</li>
+            <li>Common pitfalls avoid karna</li>
+            <li>Basic Git commands aur GitHub collaboration</li>
+        </ul>
+
+        <h2>Practice Tasks</h2>
+        <ol>
+            <li>Browser console mein error create karke debugging karo aur line number follow karo.</li>
+            <li>Ek broken script fix karo using <code>console.log</code> aur breakpoints.</li>
+            <li>Git ka use karke simple repository initialize karo aur changes commit karo.</li>
+        </ol>
+
+        <h2>Example</h2>
+        <pre><code>try {
+  let result = someUndefinedFunction();
+  console.log(result);
+} catch (error) {
+  console.error('Error mil gaya:', error);
+} finally {
+  console.log('Cleanup complete');
+}</code></pre>
+    </div>
+</body>
+</html>

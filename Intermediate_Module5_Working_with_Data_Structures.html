@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intermediate Module 5 - Working with Data Structures</title>
+<style>
+body { font-family: Arial, sans-serif; background: #f4f7fb; color: #111827; margin: 0; padding: 20px; }
+.container { max-width: 900px; background: #fff; margin: auto; padding: 28px; border-radius: 12px; box-shadow: 0 15px 35px rgba(15,23,42,.08); }
+h1,h2 { color: #0f172a; }
+pre { background: #eef2ff; padding: 16px; border-radius: 10px; overflow-x: auto; }
+code { font-family: Consolas, Monaco, monospace; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Intermediate Module 5: Working with Data Structures</h1>
+<h2>Theory</h2>
+<p>Is module mein Map, Set, nested data, deep copy, aur destructuring patterns cover karenge.</p>
+<h2>Topics</h2>
+<ul>
+<li>Map, Set, WeakMap, WeakSet</li>
+<li>Objects vs maps/sets</li>
+<li>Deep copying objects and arrays</li>
+<li>Nested data structures</li>
+<li>Cloning and merging objects</li>
+<li>Destructuring arrays and objects</li>
+<li>Default values, aliasing</li>
+</ul>
+<h2>Practice Tasks</h2>
+<ol>
+<li>Map aur Set create karo aur unke methods use karo.</li>
+<li>Deep copy example likho with nested object.</li>
+<li>Destructuring aur default values ka example banao.</li>
+</ol>
+<h2>Example</h2>
+<pre><code>const user = { name: 'Sandeep', details: { age: 18, city: 'Ramsinghpur' } };
+const copy = JSON.parse(JSON.stringify(user));
+copy.details.city = 'New City';
+console.log(user.details.city, copy.details.city);
+
+const map = new Map();
+map.set('a', 1);
+map.set('b', 2);
+console.log(map.get('a'));
+
+const { name, details: { age }, details: { city = 'Unknown' } } = user;
+console.log(name, age, city);
+</code></pre>
+</div>
+</body>
+</html>

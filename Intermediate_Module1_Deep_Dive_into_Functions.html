@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intermediate Module 1 - Deep Dive into Functions</title>
+<style>
+body { font-family: Arial, sans-serif; background: #f4f7fb; color: #111827; margin: 0; padding: 20px; }
+.container { max-width: 900px; background: #fff; margin: auto; padding: 28px; border-radius: 12px; box-shadow: 0 15px 35px rgba(15,23,42,.08); }
+h1,h2 { color: #0f172a; }
+pre { background: #eef2ff; padding: 16px; border-radius: 10px; overflow-x: auto; }
+code { font-family: Consolas, Monaco, monospace; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Intermediate Module 1: Deep Dive into Functions</h1>
+<h2>Theory</h2>
+<p>Is module mein functions ke advanced concepts, closures, aur <code>this</code> context ko practical examples se samjhenge.</p>
+<h2>Topics</h2>
+<ul>
+<li>Higher-order functions</li>
+<li>Callbacks aur unki importance</li>
+<li>Function currying</li>
+<li>Closures aur lexical scope</li>
+<li><code>this</code> ka behavior</li>
+<li><code>call</code>, <code>apply</code>, <code>bind</code></li>
+<li>Arrow functions aur <code>this</code></li>
+</ul>
+<h2>Practice Tasks</h2>
+<ol>
+<li>Higher-order function likho jo function ko argument mein le aur result return kare.</li>
+<li>Callback function use karke array par operation karo.</li>
+<li>Currying example banao aur step-by-step result dekho.</li>
+<li>Closure create karo jisme inner function outer variable access kare.</li>
+<li><code>call</code>/<code>apply</code>/<code>bind</code> ka example banao.</li>
+</ol>
+<h2>Example</h2>
+<pre><code>function greet(greeting) {
+  return function(name) {
+    console.log(`${greeting}, ${name}!`);
+  };
+}
+const sayHello = greet('Hello');
+sayHello('Sandeep');
+
+function multiply(a) {
+  return function(b) {
+    return a * b;
+  };
+}
+const double = multiply(2);
+console.log(double(5));
+
+const person = { name: 'Asha' };
+function sayAge(age) {
+  console.log(this.name + ' is ' + age);
+}
+sayAge.call(person, 18);
+</code></pre>
+</div>
+</body>
+</html>

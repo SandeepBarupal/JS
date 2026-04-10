@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 6 - DOM Manipulation</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f4f7fb; color: #111827; }
+        .container { max-width: 900px; margin: 0 auto; background: #ffffff; border-radius: 12px; padding: 28px; box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08); }
+        h1, h2 { color: #0f172a; }
+        pre { background: #eef2ff; padding: 16px; border-radius: 10px; overflow-x: auto; }
+        code { font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Module 6: DOM Manipulation</h1>\n        <h2>Theory</h2>\n        <p>Is page ka purpose aur module ki basic theory yahan diya gaya hai, jisse aap asan tareeke se samajh sakein.</p>
+        <p>Is module mein DOM ko access aur change karna seekhenge, saath hi events aur element creation bhi.</p>
+
+        <h2>Topics</h2>
+        <ul>
+            <li>Document Object Model kya hota hai</li>
+            <li>Elements access karna (<code>getElementById</code>, <code>querySelector</code>)</li>
+            <li>Content aur attributes modify karna</li>
+            <li>Event listeners (click, mouseover, input)</li>
+            <li>Event propagation, preventDefault, event delegation</li>
+            <li>Elements create, append, remove, replace</li>
+            <li>JavaScript se styles modify karna</li>
+        </ul>
+
+        <h2>Practice Tasks</h2>
+        <ol>
+            <li>Ek HTML page banayein jisme button click se text change ho.</li>
+            <li>Input field ka value read karein aur page par display karein.</li>
+            <li>Dynamic elements create karein aur DOM mein add karein.</li>
+        </ol>
+
+        <h2>Example</h2>
+        <pre><code>document.addEventListener('DOMContentLoaded', function() {
+  const heading = document.querySelector('#title');
+  const button = document.querySelector('#changeButton');
+
+  button.addEventListener('click', function() {
+    heading.textContent = 'JavaScript se text change ho gaya!';
+    heading.style.color = 'blue';
+  });
+});</code></pre>
+    </div>
+</body>
+</html>

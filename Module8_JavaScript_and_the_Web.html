@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 8 - JavaScript and the Web</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f4f7fb; color: #111827; }
+        .container { max-width: 900px; margin: 0 auto; background: #ffffff; border-radius: 12px; padding: 28px; box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08); }
+        h1, h2 { color: #0f172a; }
+        pre { background: #eef2ff; padding: 16px; border-radius: 10px; overflow-x: auto; }
+        code { font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Module 8: JavaScript and the Web</h1>\n        <h2>Theory</h2>\n        <p>Is page ka purpose aur module ki basic theory yahan diya gaya hai, jisse aap asan tareeke se samajh sakein.</p>
+        <p>Is module mein forms, browser storage, aur ES6+ features ke basics seekhenge.</p>
+
+        <h2>Topics</h2>
+        <ul>
+            <li>Form validation aur submission handling</li>
+            <li>localStorage aur sessionStorage</li>
+            <li>JSON parsing aur stringify</li>
+            <li>ES6 features: template literals, destructuring, spread/rest</li>
+            <li>Modules (import/export)</li>
+        </ul>
+
+        <h2>Practice Tasks</h2>
+        <ol>
+            <li>Form create karo jisme user name aur email enter kare aur submit pe result show ho.</li>
+            <li>localStorage mein user data store karo aur page reload par wapas load karo.</li>
+            <li>Template literals aur destructuring use karke simple object data print karo.</li>
+        </ol>
+
+        <h2>Example</h2>
+        <pre><code>const user = { name: 'Sandeep', age: 18 };
+const { name, age } = user;
+console.log(`Name: ${name}, Age: ${age}`);
+
+localStorage.setItem('user', JSON.stringify(user));
+const saved = JSON.parse(localStorage.getItem('user'));
+console.log(saved);</code></pre>
+    </div>
+</body>
+</html>

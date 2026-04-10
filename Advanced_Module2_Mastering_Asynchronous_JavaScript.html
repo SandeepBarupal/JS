@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Module 2 - Mastering Asynchronous JavaScript</title>
+<style>
+body { font-family: Arial, sans-serif; background: #f4f7fb; color: #111827; margin: 0; padding: 20px; }
+.container { max-width: 900px; background: #fff; margin: auto; padding: 28px; border-radius: 12px; box-shadow: 0 15px 35px rgba(15,23,42,.08); }
+h1,h2 { color: #0f172a; }
+pre { background: #eef2ff; padding: 16px; border-radius: 10px; overflow-x: auto; }
+code { font-family: Consolas, Monaco, monospace; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Advanced Module 2: Mastering Asynchronous JavaScript</h1>
+<h2>Theory</h2>
+<p>Is module mein asynchronous model, promises, async/await, aur concurrency behavior ko deep samjhenge.</p>
+<h2>Topics</h2>
+<ul>
+<li>Single-threaded JavaScript aur event-driven architecture</li>
+<li>Async, defer, parallel execution</li>
+<li>Promise chaining aur error handling</li>
+<li>Custom Promise-like structures</li>
+<li><code>Promise.all</code>, <code>Promise.race</code>, <code>Promise.allSettled</code></li>
+<li>Async/await strategies</li>
+<li>Callback-based code integration</li>
+</ul>
+<h2>Practice Tasks</h2>
+<ol>
+<li>Multiple promises create karo aur <code>Promise.all</code> se manage karo.</li>
+<li>Custom promise-like object banakar samjho.</li>
+<li>Async function mein parallel vs sequential request compare karo.</li>
+</ol>
+<h2>Example</h2>
+<pre><code>function wait(ms) {
+  return new Promise(resolve =&gt; setTimeout(resolve, ms));
+}
+
+async function loadAll() {
+  const p1 = wait(500).then(() =&gt; 'A');
+  const p2 = wait(1000).then(() =&gt; 'B');
+  const results = await Promise.all([p1, p2]);
+  console.log(results);
+}
+loadAll();
+</code></pre>
+</div>
+</body>
+</html>

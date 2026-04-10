@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Module 3 - Functional Programming in JavaScript</title>
+<style>
+body { font-family: Arial, sans-serif; background: #f4f7fb; color: #111827; margin: 0; padding: 20px; }
+.container { max-width: 900px; background: #fff; margin: auto; padding: 28px; border-radius: 12px; box-shadow: 0 15px 35px rgba(15,23,42,.08); }
+h1,h2 { color: #0f172a; }
+pre { background: #eef2ff; padding: 16px; border-radius: 10px; overflow-x: auto; }
+code { font-family: Consolas, Monaco, monospace; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Advanced Module 3: Functional Programming in JavaScript</h1>
+<h2>Theory</h2>
+<p>Is module mein pure functions, immutability, currying, composition, aur advanced functional patterns seekhenge.</p>
+<h2>Topics</h2>
+<ul>
+<li>Pure functions aur immutability</li>
+<li>Function composition</li>
+<li>Recursion aur tail-call optimization</li>
+<li>Partial application aur currying</li>
+<li>Point-free style</li>
+<li>Immutable data structures</li>
+<li>Libraries jaise Immutable.js</li>
+</ul>
+<h2>Practice Tasks</h2>
+<ol>
+<li>Pure function aur side-effect-free code likho.</li>
+<li>Function composition ka example banao.</li>
+<li>Currying aur partial application use karo.</li>
+</ol>
+<h2>Example</h2>
+<pre><code>const add = a =&gt; b =&gt; a + b;
+const add5 = add(5);
+console.log(add5(10));
+
+const multiply = a =&gt; b =&gt; a * b;
+const times2 = multiply(2);
+console.log(times2(7));
+
+const compose = (f, g) =&gt; x =&gt; f(g(x));
+const square = x =&gt; x * x;
+const addOne = x =&gt; x + 1;
+const squareAfterAdd = compose(square, addOne);
+console.log(squareAfterAdd(4));
+</code></pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 7 - Advanced JavaScript Concepts</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f4f7fb; color: #111827; }
+        .container { max-width: 900px; margin: 0 auto; background: #ffffff; border-radius: 12px; padding: 28px; box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08); }
+        h1, h2 { color: #0f172a; }
+        pre { background: #eef2ff; padding: 16px; border-radius: 10px; overflow-x: auto; }
+        code { font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Module 7: Advanced JavaScript Concepts</h1>\n        <h2>Theory</h2>\n        <p>Is page ka purpose aur module ki basic theory yahan diya gaya hai, jisse aap asan tareeke se samajh sakein.</p>
+        <p>Is module mein asynchronous JavaScript, error handling, aur AJAX/Fetch API ka introduction hai.</p>
+
+        <h2>Topics</h2>
+        <ul>
+            <li>Asynchronous programming samajhna</li>
+            <li><code>setTimeout</code> aur <code>setInterval</code></li>
+            <li>Promises aur async/await</li>
+            <li><code>try</code>, <code>catch</code>, <code>finally</code></li>
+            <li>XMLHttpRequest aur Fetch API</li>
+            <li>JSON data handle karna</li>
+        </ul>
+
+        <h2>Practice Tasks</h2>
+        <ol>
+            <li>Simple <code>setTimeout</code> use karo aur message delay ke baad show karo.</li>
+            <li>Ek promise banao jo 2 seconds ke baad resolve ho aur console mein message show kare.</li>
+            <li>Fetch API use karke kisi public JSON API se data load karo aur console mein dekho.</li>
+        </ol>
+
+        <h2>Example</h2>
+        <pre><code>function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function run() {
+  try {
+    console.log('Wait karo...');
+    await delay(2000);
+    console.log('2 second baad yeh message aaya');
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
+run();</code></pre>
+    </div>
+</body>
+</html>

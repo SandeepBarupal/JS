@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 10 - JavaScript Project</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f4f7fb; color: #111827; }
+        .container { max-width: 900px; margin: 0 auto; background: #ffffff; border-radius: 12px; padding: 28px; box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08); }
+        h1, h2 { color: #0f172a; }
+        pre { background: #eef2ff; padding: 16px; border-radius: 10px; overflow-x: auto; }
+        code { font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Module 10: JavaScript Project</h1>
+        <h2>Theory</h2>
+        <p>Is module mein beginner-level project plan karenge, banayenge, aur deploy karenge.</p>
+
+        <h2>Topics</h2>
+        <ul>
+            <li>Project choose karna (to-do list, calculator, weather app)</li>
+            <li>Project structure plan karna</li>
+            <li>Project environment setup karna</li>
+            <li>Features implement karna step by step</li>
+            <li>HTML/CSS ke saath JavaScript integration</li>
+            <li>Debugging aur testing</li>
+            <li>Project deployment options</li>
+        </ul>
+
+        <h2>Practice Tasks</h2>
+        <ol>
+            <li>Ek simple project idea choose karo aur features list banao.</li>
+            <li>Project ke liye basic HTML/CSS/JS files banayein aur core functionality implement karo.</li>
+            <li>GitHub Pages ya Netlify par project deploy karo aur link share karne ke liye ready rakho.</li>
+        </ol>
+
+        <h2>Example</h2>
+        <pre><code>// Simple to-do item add example
+const todoInput = document.querySelector('#todoInput');
+const addButton = document.querySelector('#addButton');
+const list = document.querySelector('#todoList');
+
+addButton.addEventListener('click', function() {
+  const text = todoInput.value.trim();
+  if (text) {
+    const li = document.createElement('li');
+    li.textContent = text;
+    list.appendChild(li);
+    todoInput.value = '';
+  }
+});</code></pre>
+    </div>
+</body>
+</html>

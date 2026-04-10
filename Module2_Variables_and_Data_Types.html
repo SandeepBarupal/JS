@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2 - Variables and Data Types</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f4f7fb; color: #111827; }
+        .container { max-width: 900px; margin: 0 auto; background: #ffffff; border-radius: 12px; padding: 28px; box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08); }
+        h1, h2 { color: #0f172a; }
+        pre { background: #eef2ff; padding: 16px; border-radius: 10px; overflow-x: auto; }
+        code { font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Module 2: Variables and Data Types</h1>
+        <h2>JavaScript Variables</h2>
+        <p><strong>Definition:</strong> JavaScript variables ek box jaise hote hain jisme hum data store karte hain. Yeh ek naam hota hai jo value ko refer karta hai, jaise number, text, ya true/false value.</p>
+        <p><strong>Why Important:</strong> Variables use hota hai jab hum data ko store, update, aur reuse karna chahte hain. Web apps mein user name, score, price, aur form values sab variables mein rakhte hain.</p>
+        <p><strong>Syntax:</strong></p>
+        <pre><code>let name = 'Aman';
+const pi = 3.14;
+var age = 20;</code></pre>
+        <p><strong>Example 1:</strong></p>
+        <pre><code>let score = 10;
+console.log(score);</code></pre>
+        <p>Explanation: <code>score</code> variable banaya aur usme <code>10</code> store kiya. Fir console pe print kiya.</p>
+        <p><strong>Example 2:</strong></p>
+        <pre><code>const name = 'Riya';
+console.log('Student:', name);</code></pre>
+        <p>Explanation: <code>name</code> ko <code>const</code> se banaya, jiska matlab value change nahi hogi. Yeh student ka naam store karta hai.</p>
+        <p><strong>Example 3:</strong></p>
+        <pre><code>var count = 1;
+count = count + 1;
+console.log(count);</code></pre>
+        <p>Explanation: <code>count</code> variable banaya aur uski value badhai, phir <code>2</code> print kiya.</p>
+        <p><strong>Real Use Case:</strong> Shopping cart mein item quantity, game score, user input, aur page text show karne mein variables bahut useful hote hain.</p>
+        <p><strong>Interview Questions:</strong></p>
+        <ul>
+            <li><strong>Q1:</strong> <code>let</code>, <code>const</code>, aur <code>var</code> mein kya difference hai?<br><strong>A1:</strong> <code>let</code> aur <code>const</code> block scope hote hain, <code>const</code> change nahi hota. <code>var</code function scope hota hai aur old style hai.</li>
+            <li><strong>Q2:</strong> Kab <code>const</code> use karna chahiye?<br><strong>A2:</strong> Jab aapko value change nahi karni ho, jaise fixed number ya constant string, tab <code>const</code> use karein.</li>
+        </ul>
+        <p><strong>Summary:</strong> JavaScript Variables data store karte hain. <code>let</code> flexible hota hai, <code>const</code> fixed value ke liye, aur <code>var</code> purana tareeka hai. Variables se hum values ko reuse aur update kar sakte hain.</p>
+
+        <h2>Topics</h2>
+        <ul>
+            <li>var, let, const</li>
+            <li>Variable naming best practices</li>
+            <li>Variable scope: global vs local</li>
+            <li>Primitive data types: string, number, boolean, undefined, null</li>
+            <li>Objects, arrays, functions as non-primitive types</li>
+            <li>Type conversion aur coercion</li>
+            <li>Arithmetic, assignment, comparison, logical operators, string concatenation</li>
+        </ul>
+
+        <h2>Practice Tasks</h2>
+        <ol>
+            <li>Different variables banayein using <code>var</code>, <code>let</code>, aur <code>const</code>, aur console mein print karein.</li>
+            <li>Ek script likhein jisme string aur number values ko add karein aur result console mein dekhein.</li>
+            <li>Ek object aur array banayein, unka data access karein, aur console mein show karein.</li>
+        </ol>
+
+        <h2>Example</h2>
+        <pre><code>const userName = 'Sandeep';
+let age = 18;
+var isStudent = true;
+console.log(userName + ' ka age hai ' + age);
+
+let score = '20';
+let total = score + 5; // string concatenation
+console.log(total);</code></pre>
+    </div>
+</body>
+</html>

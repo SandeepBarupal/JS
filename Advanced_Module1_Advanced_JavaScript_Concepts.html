@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Module 1 - Advanced JavaScript Concepts</title>
+<style>
+body { font-family: Arial, sans-serif; background: #f4f7fb; color: #111827; margin: 0; padding: 20px; }
+.container { max-width: 900px; background: #fff; margin: auto; padding: 28px; border-radius: 12px; box-shadow: 0 15px 35px rgba(15,23,42,.08); }
+h1,h2 { color: #0f172a; }
+pre { background: #eef2ff; padding: 16px; border-radius: 10px; overflow-x: auto; }
+code { font-family: Consolas, Monaco, monospace; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Advanced Module 1: Advanced JavaScript Concepts</h1>
+<h2>Theory</h2>
+<p>Is module mein JavaScript engine, runtime, event loop, memory management aur scope ko deep dive se dekhenge.</p>
+<h2>Topics</h2>
+<ul>
+<li>JavaScript engine (V8, SpiderMonkey)</li>
+<li>Parsing, compilation, execution</li>
+<li>Event loop, call stack, concurrency model</li>
+<li>Memory management</li>
+<li>Garbage collection algorithms</li>
+<li>Advanced lexical scoping aur closures</li>
+</ul>
+<h2>Practice Tasks</h2>
+<ol>
+<li>Event loop ka simple example likho using <code>setTimeout</code> aur console order dekho.</li>
+<li>Closure pitfalls aur memory reference patterns identify karo.</li>
+<li>Browser devtools mein memory snapshot kaise dekhte hain, note karo.</li>
+</ol>
+<h2>Example</h2>
+<pre><code>console.log('Start');
+setTimeout(() =&gt; console.log('Timeout callback'), 0);
+console.log('End');
+
+function outer() {
+  const secret = 'hidden';
+  return function inner() {
+    console.log(secret);
+  };
+}
+const fn = outer();
+fn();
+</code></pre>
+</div>
+</body>
+</html>

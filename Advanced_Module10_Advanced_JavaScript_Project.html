@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Module 10 - Advanced JavaScript Project</title>
+<style>
+body { font-family: Arial, sans-serif; background: #f4f7fb; color: #111827; margin: 0; padding: 20px; }
+.container { max-width: 900px; background: #fff; margin: auto; padding: 28px; border-radius: 12px; box-shadow: 0 15px 35px rgba(15,23,42,.08); }
+h1,h2 { color: #0f172a; }
+pre { background: #eef2ff; padding: 16px; border-radius: 10px; overflow-x: auto; }
+code { font-family: Consolas, Monaco, monospace; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Advanced Module 10: Advanced JavaScript Project</h1>\n        <h2>Theory</h2>\n        <p>Is page ka purpose aur module ki basic theory yahan diya gaya hai, jisse aap asan tareeke se samajh sakein.</p>
+<p>Is module mein advanced architecture, implementation, testing, optimization aur deployment par focus hoga.</p>
+<h2>Topics</h2>
+<ul>
+<li>Advanced project goals aur architecture</li>
+<li>Frameworks, libraries, tools select karna</li>
+<li>Maintainability aur scalability</li>
+<li>Advanced JavaScript patterns</li>
+<li>Testing aur debugging</li>
+<li>Performance tuning</li>
+<li>CI/CD deployment</li>
+</ul>
+<h2>Practice Tasks</h2>
+<ol>
+<li>Advanced project ka scope define karo aur architecture notes banao.</li>
+<li>Core features implement karo aur test cases likho.</li>
+<li>Deployment pipeline ke liye steps identify karo.</li>
+</ol>
+<h2>Example</h2>
+<pre><code>async function loadData() {
+  try {
+    const response = await fetch('/api/data');
+    const data = await response.json();
+    render(data);
+  } catch (error) {
+    console.error('Fetch failed', error);
+  }
+}
+
+function render(data) {
+  data.forEach(item =&gt; {
+    const row = document.createElement('div');
+    row.textContent = item.name;
+    document.body.appendChild(row);
+  });
+}
+</code></pre>
+</div>
+</body>
+</html>

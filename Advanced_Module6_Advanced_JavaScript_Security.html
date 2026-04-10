@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Module 6 - Advanced JavaScript Security</title>
+<style>
+body { font-family: Arial, sans-serif; background: #f4f7fb; color: #111827; margin: 0; padding: 20px; }
+.container { max-width: 900px; background: #fff; margin: auto; padding: 28px; border-radius: 12px; box-shadow: 0 15px 35px rgba(15,23,42,.08); }
+h1,h2 { color: #0f172a; }
+pre { background: #eef2ff; padding: 16px; border-radius: 10px; overflow-x: auto; }
+code { font-family: Consolas, Monaco, monospace; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Advanced Module 6: Advanced JavaScript Security</h1>\n        <h2>Theory</h2>\n        <p>Is page ka purpose aur module ki basic theory yahan diya gaya hai, jisse aap asan tareeke se samajh sakein.</p>
+<p>Is module mein JavaScript security vulnerabilities, secure coding, aur cryptography basics cover karenge.</p>
+<h2>Topics</h2>
+<ul>
+<li>XSS, CSRF, injection attacks</li>
+<li>Security best practices</li>
+<li>Secure user input handling</li>
+<li>Content Security Policy (CSP)</li>
+<li>Secure APIs aur data exchange</li>
+<li>Avoiding insecure patterns</li>
+<li>Web Crypto API basics</li>
+<li>Hashing, encryption, decryption</li>
+</ul>
+<h2>Practice Tasks</h2>
+<ol>
+<li>Input validation example banayein aur dangerous content reject karo.</li>
+<li>Simple CSP header notes likho aur kaise use hota hai samjho.</li>
+<li>Web Crypto API se hashing ka example read karo.</li>
+</ol>
+<h2>Example</h2>
+<pre><code>const message = 'Hello';
+const encoder = new TextEncoder();
+const data = encoder.encode(message);
+window.crypto.subtle.digest('SHA-256', data).then(hash => {
+  console.log('Hash generated', new Uint8Array(hash));
+});
+</code></pre>
+</div>
+</body>
+</html>

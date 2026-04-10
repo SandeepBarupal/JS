@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Module 4 - Advanced Object-Oriented JavaScript</title>
+<style>
+body { font-family: Arial, sans-serif; background: #f4f7fb; color: #111827; margin: 0; padding: 20px; }
+.container { max-width: 900px; background: #fff; margin: auto; padding: 28px; border-radius: 12px; box-shadow: 0 15px 35px rgba(15,23,42,.08); }
+h1,h2 { color: #0f172a; }
+pre { background: #eef2ff; padding: 16px; border-radius: 10px; overflow-x: auto; }
+code { font-family: Consolas, Monaco, monospace; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Advanced Module 4: Advanced Object-Oriented JavaScript</h1>
+<h2>Theory</h2>
+<p>Is module mein advanced class features, metaprogramming, aur design patterns deep dive se dekhenge.</p>
+<h2>Topics</h2>
+<ul>
+<li>Class inheritance aur prototype chain</li>
+<li>Mixins aur composition vs inheritance</li>
+<li>Private fields aur methods (ES2022)</li>
+<li><code>Proxy</code> aur <code>Reflect</code> APIs</li>
+<li>Decorators aur meta-programming</li>
+<li>Symbols aur meta-properties</li>
+<li>Advanced design patterns: Mediator, Flyweight, Proxy</li>
+</ul>
+<h2>Practice Tasks</h2>
+<ol>
+<li>Private field aur method use karke class banayein.</li>
+<li><code>Proxy</code> se object access intercept karo.</li>
+<li>Flyweight ya mediator pattern ka simple example banao.</li>
+</ol>
+<h2>Example</h2>
+<pre><code>class User {
+  #password;
+  constructor(name, password) {
+    this.name = name;
+    this.#password = password;
+  }
+  checkPassword(pass) {
+    return this.#password === pass;
+  }
+}
+const user = new User('Asha', 'secret');
+console.log(user.checkPassword('secret'));
+
+const handler = {
+  get(target, prop) {
+    console.log('Accessing', prop);
+    return target[prop];
+  }
+};
+const proxyUser = new Proxy({ name: 'Sandeep' }, handler);
+console.log(proxyUser.name);
+</code></pre>
+</div>
+</body>
+</html>
