@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Types</title>
+
+<style>
+body {
+    margin: 0;
+    background: #f8fafc;
+    font-family: Arial;
+}
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+}
+pre {
+    background: #f3f4f6;
+    padding: 15px;
+    border-radius: 8px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>JavaScript Data Types</h1>
+
+<p><strong>Definition:</strong> Data types batate hain ki variable ke andar kis type ka data store hai.</p>
+
+<p><strong>Why Important:</strong> Data type se JavaScript ko pata chalta hai ki data par kaise operation karna hai.</p>
+
+<h2>Types of Data Types</h2>
+
+<ul>
+<li>Number</li>
+<li>String</li>
+<li>Boolean</li>
+<li>Undefined</li>
+<li>Null</li>
+<li>Object</li>
+<li>Array</li>
+</ul>
+
+<!-- NUMBER -->
+<h2>1. Number</h2>
+<pre><code>let num = 100;
+console.log(typeof num); // number</code></pre>
+
+<!-- STRING -->
+<h2>2. String</h2>
+<pre><code>let name = "Sandeep";
+console.log(typeof name); // string</code></pre>
+
+<!-- BOOLEAN -->
+<h2>3. Boolean</h2>
+<pre><code>let isActive = true;
+console.log(typeof isActive); // boolean</code></pre>
+
+<!-- UNDEFINED -->
+<h2>4. Undefined</h2>
+<pre><code>let x;
+console.log(typeof x); // undefined</code></pre>
+
+<!-- NULL -->
+<h2>5. Null</h2>
+<pre><code>let y = null;
+console.log(typeof y); // object (JS bug)</code></pre>
+
+<!-- OBJECT -->
+<h2>6. Object</h2>
+<pre><code>let user = {
+    name: "Sandeep",
+    age: 20
+};
+console.log(typeof user);</code></pre>
+
+<!-- ARRAY -->
+<h2>7. Array</h2>
+<pre><code>let arr = [1, 2, 3];
+console.log(typeof arr); // object</code></pre>
+
+<h2>Example</h2>
+<pre><code>let a = 10;
+let b = "Hello";
+let c = true;
+
+console.log(a, b, c);
+</code></pre>
+
+<h2>Practice Tasks</h2>
+<ol>
+<li>Ek number variable banao aur type check karo</li>
+<li>Ek string aur boolean create karo</li>
+<li>Ek object aur array bana ke print karo</li>
+</ol>
+
+<h2>Script Example</h2>
+<pre><code>function checkTypes() {
+    let num = 50;
+    let str = "JS";
+    let bool = false;
+    let arr = [1,2];
+    let obj = {name:"Dev"};
+
+    console.log(typeof num);
+    console.log(typeof str);
+    console.log(typeof bool);
+    console.log(typeof arr);
+    console.log(typeof obj);
+}
+
+checkTypes();
+</code></pre>
+
+</div>
+</body>
+</html>

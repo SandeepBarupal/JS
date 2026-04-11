@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Events</title>
+
+<style>
+body {
+    margin: 0;
+    background: #f8fafc;
+    font-family: Arial;
+}
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+}
+pre {
+    background: #f3f4f6;
+    padding: 15px;
+    border-radius: 8px;
+}
+button, input, select {
+    margin: 10px 0;
+    padding: 8px;
+}
+.box {
+    width: 200px;
+    height: 100px;
+    background: lightblue;
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>JavaScript All Events</h1>
+
+<!-- CLICK -->
+<h2>Click Event</h2>
+<button id="clickBtn">Click Me</button>
+
+<!-- DOUBLE CLICK -->
+<h2>Double Click</h2>
+<button id="dblBtn">Double Click Me</button>
+
+<!-- MOUSE -->
+<h2>Mouse Events</h2>
+<div class="box" id="box">Hover / Move / Leave</div>
+
+<!-- KEYBOARD -->
+<h2>Keyboard Events</h2>
+<input type="text" id="keyInput" placeholder="Type something">
+
+<!-- INPUT -->
+<h2>Input Event</h2>
+<input type="text" id="inputBox" placeholder="Live typing...">
+
+<!-- FOCUS / BLUR -->
+<h2>Focus & Blur</h2>
+<input type="text" id="focusInput" placeholder="Click here">
+
+<!-- FORM -->
+<h2>Form Event</h2>
+<form id="myForm">
+    <input type="text" placeholder="Enter name">
+    <button type="submit">Submit</button>
+</form>
+
+<!-- CHANGE -->
+<h2>Change Event</h2>
+<select id="selectBox">
+    <option>Choose</option>
+    <option>JS</option>
+    <option>HTML</option>
+</select>
+
+<!-- RIGHT CLICK -->
+<h2>Right Click</h2>
+<p>Right click anywhere</p>
+
+<!-- WINDOW -->
+<h2>Window Events</h2>
+<p>Resize / Scroll / Reload page</p>
+
+<script>
+
+// DOM READY
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("DOM Ready");
+});
+
+// CLICK
+clickBtn.addEventListener("click", function() {
+    alert("Clicked");
+});
+
+// DOUBLE CLICK
+dblBtn.addEventListener("dblclick", function() {
+    alert("Double Clicked");
+});
+
+// MOUSE EVENTS
+let box = document.getElementById("box");
+
+box.addEventListener("mouseenter", () => box.style.background = "green");
+box.addEventListener("mouseleave", () => box.style.background = "lightblue");
+
+box.addEventListener("mousemove", function() {
+    console.log("Mouse Moving");
+});
+
+// RIGHT CLICK
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+    alert("Right Click Disabled");
+});
+
+// KEYBOARD
+let keyInput = document.getElementById("keyInput");
+
+keyInput.addEventListener("keydown", () => console.log("Key Down"));
+keyInput.addEventListener("keyup", () => console.log("Key Up"));
+keyInput.addEventListener("keypress", () => console.log("Key Press"));
+
+// INPUT EVENT
+document.getElementById("inputBox").addEventListener("input", function() {
+    console.log(this.value);
+});
+
+// FOCUS / BLUR
+let focusInput = document.getElementById("focusInput");
+
+focusInput.addEventListener("focus", () => console.log("Focused"));
+focusInput.addEventListener("blur", () => console.log("Blurred"));
+
+// FORM
+myForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("Form Submitted");
+});
+
+// CHANGE
+selectBox.addEventListener("change", function() {
+    console.log("Selected:", this.value);
+});
+
+// WINDOW EVENTS
+window.addEventListener("load", () => console.log("Page Loaded"));
+window.addEventListener("resize", () => console.log("Resized"));
+window.addEventListener("scroll", () => console.log("Scrolling"));
+
+</script>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: #f8fafc;
+            color: #111827;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+        }
+        h1, h2 { color: #0f172a; }
+        p, li { line-height: 1.7; }
+        pre {
+            background: #f3f4f6;
+            padding: 18px;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+<h1>Methods</h1>
+<h2>JavaScript Methods</h2>
+
+<p><strong>Definition:</strong> Methods wo functions hote hain jo kisi object ke andar define hote hain.</p>
+
+<p><strong>Why Important:</strong> Methods se object ke data par kaam kar sakte hain, jaise string ko uppercase karna ya array ko modify karna.</p>
+
+<p><strong>Syntax:</strong></p>
+<pre><code>object.methodName();</code></pre>
+
+<p><strong>Example 1:</strong></p>
+<pre><code>let text = "hello";
+console.log(text.toUpperCase());</code></pre>
+
+<p><strong>Example 2:</strong></p>
+<pre><code>let arr = [1, 2, 3];
+arr.push(4);
+console.log(arr);</code></pre>
+
+<p><strong>Example 3:</strong></p>
+<pre><code>let name = "Sandeep";
+console.log(name.length);</code></pre>
+
+<p><strong>Real Use Case:</strong> Data manipulate karna, strings change karna, arrays manage karna.</p>
+
+<p><strong>Interview Questions:</strong></p>
+<ul>
+<li><strong>Q1:</strong> Method kya hota hai?<br><strong>A:</strong> Object ke andar function ko method kehte hain.</li>
+<li><strong>Q2:</strong> push() method kya karta hai?<br><strong>A:</strong> Array ke end me element add karta hai.</li>
+</ul>
+
+<p><strong>Summary:</strong> Methods object ke actions hote hain. String aur array ke methods bahut use hote hain.</p>
+
+<h2>Topics</h2>
+<ul>
+<li>String Methods</li>
+<li>Array Methods</li>
+<li>Built-in Methods</li>
+<li>Custom Methods</li>
+</ul>
+
+<h2>Example</h2>
+<pre><code>let fruits = ["apple", "banana"];
+fruits.push("mango");
+
+console.log(fruits);
+</code></pre>
+
+<h2>Practice Tasks</h2>
+<ol>
+<li>String ko uppercase karo</li>
+<li>Array me element add karo</li>
+<li>Array ka length print karo</li>
+</ol>
+
+<h2>Script Example</h2>
+<pre><code>function demo() {
+    let msg = "hello";
+    console.log(msg.toUpperCase());
+
+    let nums = [1, 2];
+    nums.push(3);
+    console.log(nums);
+}
+
+demo();
+</code></pre>
+
+</div>
+</body>
+</html>
