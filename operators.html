@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Operators</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f1f5f9;
+}
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+}
+h1 { margin-top: 0; }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 20px;
+    background: #f8fafc;
+}
+
+pre {
+    background: #0f172a;
+    color: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.table th, .table td {
+    border: 1px solid #cbd5e1;
+    padding: 10px;
+}
+
+.table th {
+    background: #e2e8f0;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>JavaScript Operators</h1>
+
+<p><b>JavaScript me operators 6 type ke hote hain:</b></p>
+
+<ul>
+<li>Arithmetic</li>
+<li>Assignment</li>
+<li>Comparison</li>
+<li>Logical</li>
+<li>Unary</li>
+<li>Ternary</li>
+</ul>
+
+<!-- TABLE -->
+<h2>Operators Overview</h2>
+
+<table class="table">
+<tr>
+<th>Type</th>
+<th>Example</th>
+<th>Use</th>
+</tr>
+
+<tr>
+<td>Arithmetic</td>
+<td>+, -, *, /</td>
+<td>Calculation</td>
+</tr>
+
+<tr>
+<td>Assignment</td>
+<td>=, +=, -=</td>
+<td>Value assign</td>
+</tr>
+
+<tr>
+<td>Comparison</td>
+<td>==, ===, >, <</td>
+<td>Compare</td>
+</tr>
+
+<tr>
+<td>Logical</td>
+<td>&&, ||, !</td>
+<td>Condition</td>
+</tr>
+
+<tr>
+<td>Unary</td>
+<td>++, --</td>
+<td>Single value</td>
+</tr>
+
+<tr>
+<td>Ternary</td>
+<td>? :</td>
+<td>Short if-else</td>
+</tr>
+
+</table>
+
+<div class="grid">
+
+<!-- Arithmetic -->
+<div class="card">
+<h3>Arithmetic</h3>
+<pre><code>
+let a = 10, b = 5;
+console.log(a + b);
+console.log(a - b);
+console.log(a * b);
+</code></pre>
+</div>
+
+<!-- Assignment -->
+<div class="card">
+<h3>Assignment</h3>
+<pre><code>
+let x = 10;
+x += 5;
+x -= 2;
+</code></pre>
+</div>
+
+<!-- Comparison -->
+<div class="card">
+<h3>Comparison</h3>
+<pre><code>
+console.log(5 == "5");
+console.log(5 === "5");
+</code></pre>
+</div>
+
+<!-- Logical -->
+<div class="card">
+<h3>Logical</h3>
+<pre><code>
+console.log(true && false);
+console.log(true || false);
+</code></pre>
+</div>
+
+<!-- Unary -->
+<div class="card">
+<h3>Unary</h3>
+<pre><code>
+let x = 5;
+x++;
+x--;
+</code></pre>
+</div>
+
+<!-- Ternary -->
+<div class="card">
+<h3>Ternary</h3>
+<pre><code>
+let age = 18;
+let result = (age >= 18) ? "Adult" : "Child";
+</code></pre>
+</div>
+
+</div>
+
+<!-- NOTES -->
+<h2>Important Notes</h2>
+
+<ul>
+<li>== value check karta hai</li>
+<li>=== value + type check karta hai</li>
+<li>&& = AND, || = OR</li>
+<li>Ternary = short if-else</li>
+</ul>
+
+</div>
+
+</body>
+</html>
