@@ -1,106 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Methods</title>
-    <style>
-        body {
-            margin: 0;
-            min-height: 100vh;
-            background: #f8fafc;
-            color: #111827;
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 14px;
-            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
-        }
-        h1, h2 { color: #0f172a; }
-        p, li { line-height: 1.7; }
-        pre {
-            background: #f3f4f6;
-            padding: 18px;
-            border-radius: 10px;
-            overflow-x: auto;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Input Methods</title>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+body {
+    font-family: Arial;
+    background: #f1f5f9;
+    margin: 0;
+}
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+}
+input, button {
+    padding: 10px;
+    margin: 8px 5px;
+}
+.result {
+    margin-top: 20px;
+    padding: 12px;
+    background: #e2e8f0;
+}
+</style>
+
 </head>
+
 <body>
+
 <div class="container">
+    <h1>All Input Methods (JS + jQuery)</h1>
 
-<h1>Methods</h1>
-<h2>JavaScript Methods</h2>
+    <input type="text" id="nameInput" placeholder="Enter your name">
 
-<p><strong>Definition:</strong> Methods wo functions hote hain jo kisi object ke andar define hote hain.</p>
+    <br>
 
-<p><strong>Why Important:</strong> Methods se object ke data par kaam kar sakte hain, jaise string ko uppercase karna ya array ko modify karna.</p>
+    <button onclick="getById()">JS getElementById</button>
+    <button onclick="getByQuery()">JS querySelector</button>
+    <button onclick="getByName()">JS getElementsByName</button>
 
-<p><strong>Syntax:</strong></p>
-<pre><code>object.methodName();</code></pre>
+    <button id="jqVal">jQuery .val()</button>
+    <button id="jqText">jQuery .text()</button>
+    <button id="jqHtml">jQuery .html()</button>
 
-<p><strong>Example 1:</strong></p>
-<pre><code>let text = "hello";
-console.log(text.toUpperCase());</code></pre>
+    <div class="result" id="output">Output...</div>
+</div>
 
-<p><strong>Example 2:</strong></p>
-<pre><code>let arr = [1, 2, 3];
-arr.push(4);
-console.log(arr);</code></pre>
+<script>
 
-<p><strong>Example 3:</strong></p>
-<pre><code>let name = "Sandeep";
-console.log(name.length);</code></pre>
+// ---------------- PURE JS METHODS ----------------
 
-<p><strong>Real Use Case:</strong> Data manipulate karna, strings change karna, arrays manage karna.</p>
-
-<p><strong>Interview Questions:</strong></p>
-<ul>
-<li><strong>Q1:</strong> Method kya hota hai?<br><strong>A:</strong> Object ke andar function ko method kehte hain.</li>
-<li><strong>Q2:</strong> push() method kya karta hai?<br><strong>A:</strong> Array ke end me element add karta hai.</li>
-</ul>
-
-<p><strong>Summary:</strong> Methods object ke actions hote hain. String aur array ke methods bahut use hote hain.</p>
-
-<h2>Topics</h2>
-<ul>
-<li>String Methods</li>
-<li>Array Methods</li>
-<li>Built-in Methods</li>
-<li>Custom Methods</li>
-</ul>
-
-<h2>Example</h2>
-<pre><code>let fruits = ["apple", "banana"];
-fruits.push("mango");
-
-console.log(fruits);
-</code></pre>
-
-<h2>Practice Tasks</h2>
-<ol>
-<li>String ko uppercase karo</li>
-<li>Array me element add karo</li>
-<li>Array ka length print karo</li>
-</ol>
-
-<h2>Script Example</h2>
-<pre><code>function demo() {
-    let msg = "hello";
-    console.log(msg.toUpperCase());
-
-    let nums = [1, 2];
-    nums.push(3);
-    console.log(nums);
+// 1. getElementById
+function getById() {
+    let value = document.getElementById("nameInput").value;
+    document.getElementById("output").innerText = "getElementById: " + value;
 }
 
-demo();
-</code></pre>
+// 2. querySelector
+function getByQuery() {
+    let value = document.querySelector("#nameInput").value;
+    document.getElementById("output").innerText = "querySelector: " + value;
+}
 
-</div>
+// 3. getElementsByName
+function getByName() {
+    let value = document.getElementsByName("username")[0]?.value || "No name attr";
+    document.getElementById("output").innerText = "getElementsByName: " + value;
+}
+
+// ---------------- jQuery METHODS ----------------
+
+$(document).ready(function(){
+
+    // .val()
+    $("#jqVal").click(function(){
+        let value = $("#nameInput").val();
+        $("#output").text("jQuery .val(): " + value);
+    });
+
+    // .text()
+    $("#jqText").click(function(){
+        let value = $("#nameInput").val();
+        $("#output").text("jQuery .text(): " + value);
+    });
+
+    // .html()
+    $("#jqHtml").click(function(){
+        let value = $("#nameInput").val();
+        $("#output").html("<b>jQuery .html(): " + value + "</b>");
+    });
+
+});
+
+</script>
+
 </body>
 </html>

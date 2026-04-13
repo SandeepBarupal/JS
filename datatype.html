@@ -3,121 +3,157 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data Types</title>
+<title>JavaScript Data Types</title>
 
 <style>
 body {
     margin: 0;
-    background: #f8fafc;
     font-family: Arial;
+    background: #f1f5f9;
 }
 .container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 40px auto;
     background: white;
     padding: 30px;
-    border-radius: 12px;
+    border-radius: 16px;
+}
+h1 {
+    margin-top: 0;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.card {
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 20px;
+    background: #f8fafc;
 }
 pre {
-    background: #f3f4f6;
-    padding: 15px;
-    border-radius: 8px;
+    background: #0f172a;
+    color: #fff;
+    padding: 12px;
+    border-radius: 10px;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+}
+.table th, .table td {
+    border: 1px solid #cbd5e1;
+    padding: 10px;
+}
+.table th {
+    background: #e2e8f0;
 }
 </style>
+
 </head>
 
 <body>
+
 <div class="container">
 
 <h1>JavaScript Data Types</h1>
 
-<p><strong>Definition:</strong> Data types batate hain ki variable ke andar kis type ka data store hai.</p>
-
-<p><strong>Why Important:</strong> Data type se JavaScript ko pata chalta hai ki data par kaise operation karna hai.</p>
-
-<h2>Types of Data Types</h2>
+<p><b>JavaScript me data types 2 type ke hote hain:</b></p>
 
 <ul>
-<li>Number</li>
-<li>String</li>
-<li>Boolean</li>
-<li>Undefined</li>
-<li>Null</li>
-<li>Object</li>
-<li>Array</li>
+<li><b>1. Primitive Data Types</b></li>
+<li><b>2. Non-Primitive (Reference) Data Types</b></li>
 </ul>
 
-<!-- NUMBER -->
-<h2>1. Number</h2>
-<pre><code>let num = 100;
-console.log(typeof num); // number</code></pre>
+<!-- TABLE -->
+<h2>Data Type Classification</h2>
 
-<!-- STRING -->
-<h2>2. String</h2>
-<pre><code>let name = "Sandeep";
-console.log(typeof name); // string</code></pre>
+<table class="table">
+<tr>
+<th>Category</th>
+<th>Types</th>
+<th>Description</th>
+</tr>
 
-<!-- BOOLEAN -->
-<h2>3. Boolean</h2>
-<pre><code>let isActive = true;
-console.log(typeof isActive); // boolean</code></pre>
+<tr>
+<td>Primitive</td>
+<td>String, Number, Boolean, Undefined, Null</td>
+<td>Simple values store karta hai</td>
+</tr>
 
-<!-- UNDEFINED -->
-<h2>4. Undefined</h2>
-<pre><code>let x;
-console.log(typeof x); // undefined</code></pre>
+<tr>
+<td>Non-Primitive</td>
+<td>Object, Array, Function</td>
+<td>Complex / reference values store karta hai</td>
+</tr>
 
-<!-- NULL -->
-<h2>5. Null</h2>
-<pre><code>let y = null;
-console.log(typeof y); // object (JS bug)</code></pre>
+</table>
 
-<!-- OBJECT -->
-<h2>6. Object</h2>
-<pre><code>let user = {
-    name: "Sandeep",
-    age: 20
-};
-console.log(typeof user);</code></pre>
+<!-- CARDS -->
+<div class="grid">
 
-<!-- ARRAY -->
-<h2>7. Array</h2>
-<pre><code>let arr = [1, 2, 3];
-console.log(typeof arr); // object</code></pre>
+<div class="card">
+<h3>String</h3>
+<pre><code>let name = "Sandeep";</code></pre>
+</div>
 
-<h2>Example</h2>
-<pre><code>let a = 10;
-let b = "Hello";
-let c = true;
+<div class="card">
+<h3>Number</h3>
+<pre><code>let age = 18;</code></pre>
+</div>
 
-console.log(a, b, c);
-</code></pre>
+<div class="card">
+<h3>Boolean</h3>
+<pre><code>let isLogin = true;</code></pre>
+</div>
 
-<h2>Practice Tasks</h2>
-<ol>
-<li>Ek number variable banao aur type check karo</li>
-<li>Ek string aur boolean create karo</li>
-<li>Ek object aur array bana ke print karo</li>
-</ol>
+<div class="card">
+<h3>Undefined</h3>
+<pre><code>let x;</code></pre>
+</div>
 
-<h2>Script Example</h2>
-<pre><code>function checkTypes() {
-    let num = 50;
-    let str = "JS";
-    let bool = false;
-    let arr = [1,2];
-    let obj = {name:"Dev"};
+<div class="card">
+<h3>Null</h3>
+<pre><code>let data = null;</code></pre>
+</div>
 
-    console.log(typeof num);
-    console.log(typeof str);
-    console.log(typeof bool);
-    console.log(typeof arr);
-    console.log(typeof obj);
-}
+<div class="card">
+<h3>Object</h3>
+<pre><code>let user = {name:"Sandeep"};</code></pre>
+</div>
 
-checkTypes();
+<div class="card">
+<h3>Array</h3>
+<pre><code>let arr = [1,2,3];</code></pre>
+</div>
+
+<div class="card">
+<h3>Function</h3>
+<pre><code>function test(){}</code></pre>
+</div>
+
+</div>
+
+<!-- EXTRA THEORY -->
+<h2>Important Notes</h2>
+
+<ul>
+<li>typeof se data type check kar sakte hain</li>
+<li>null ka type "object" aata hai (JavaScript bug)</li>
+<li>Array bhi internally object hota hai</li>
+</ul>
+
+<pre><code>
+console.log(typeof "Hello");   // string
+console.log(typeof 10);        // number
+console.log(typeof true);      // boolean
+console.log(typeof null);      // object
+console.log(typeof []);        // object
 </code></pre>
 
 </div>
+
 </body>
 </html>

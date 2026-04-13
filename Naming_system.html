@@ -1,93 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naming System</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background: #f9f9fb;
-            color: #1f2937;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-            padding: 30px;
-        }
-        h1, h2 {
-            color: #0f172a;
-        }
-        pre {
-            background: #f3f4f6;
-            padding: 16px;
-            border-radius: 8px;
-            overflow-x: auto;
-        }
-        code {
-            font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Input Methods</title>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+body {
+    font-family: Arial;
+    background: #f1f5f9;
+    margin: 0;
+}
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+}
+input, button {
+    padding: 10px;
+    margin: 8px 5px;
+}
+.result {
+    margin-top: 20px;
+    padding: 12px;
+    background: #e2e8f0;
+}
+</style>
+
 </head>
+
 <body>
-    <div class="container">
-        <h1>Naming System</h1>
-        <h2>Theory</h2>
-        <p>Yeh page JavaScript aur programming ke liye variable naming ke best practices batata hai.</p>
 
-        <h2>1. Meaningful name use karo</h2>
-        <p>Aise variable names choose karo jo value ya purpose ko clearly batayein.</p>
-        <pre><code>let userName = 'Sandeep';
-const maxItems = 10;
-let averageScore = 84.5;</code></pre>
+<div class="container">
+    <h1>All Input Methods (JS + jQuery)</h1>
 
-        <h2>2. Consistent style follow karo</h2>
-        <p>JavaScript mein usually camelCase use hota hai variables aur functions ke liye.</p>
-        <pre><code>let firstName = 'Asha';
-let totalCount = 0;
-function calculateTotal() {
-    // ...
-}</code></pre>
+    <input type="text" id="nameInput" placeholder="Enter your name">
 
-        <h2>3. Single-letter names avoid karo</h2>
-        <p>Short names sirf loop counters ya temporary values ke liye use karo.</p>
-        <pre><code>for (let i = 0; i < items.length; i++) {
-    const item = items[i];
-    // ...
-}</code></pre>
+    <br>
 
-        <h2>4. Constants ke liye const use karo</h2>
-        <p>Jab value change nahi hogi, tab <code>const</code> ka use karo.</p>
-        <pre><code>const TAX_RATE = 0.07;
-const API_URL = 'https://api.example.com';</code></pre>
+    <button onclick="getById()">JS getElementById</button>
+    <button onclick="getByQuery()">JS querySelector</button>
+    <button onclick="getByName()">JS getElementsByName</button>
 
-        <h2>5. Naming system aur case styles</h2>
-        <p>Common naming styles JavaScript aur general code ke liye:</p>
-        <ul>
-            <li><strong>Camel Case</strong> (JS mein most used): <code>let userName = "Sandeep";</code></li>
-            <li><strong>Pascal Case</strong> (class/constructor ke liye): <code>let UserName = "Sandeep";</code></li>
-            <li><strong>Snake Case</strong>: <code>let user_name = "Sandeep";</code></li>
-            <li><strong>Upper Case</strong> (constants): <code>const PI = 3.14;</code></li>
-        </ul>
+    <button id="jqVal">jQuery .val()</button>
+    <button id="jqText">jQuery .text()</button>
+    <button id="jqHtml">jQuery .html()</button>
 
-        <h2>6. Reserved words avoid karo</h2>
-        <p>JavaScript reserved keywords jaise <code>var</code>, <code>function</code>, ya <code>class</code> names ke liye mat use karo.</p>
+    <div class="result" id="output">Output...</div>
+</div>
 
-        <h2>7. Good naming ke examples</h2>
-        <pre><code>let shoppingCart = [];
-let totalPrice = 0;
-let isLoggedIn = false;
+<script>
 
-function updateCart(item) {
-    shoppingCart.push(item);
+// ---------------- PURE JS METHODS ----------------
+
+// 1. getElementById
+function getById() {
+    let value = document.getElementById("nameInput").value;
+    document.getElementById("output").innerText = "getElementById: " + value;
 }
 
-const maxUsers = 100;</code></pre>
-    </div>
+// 2. querySelector
+function getByQuery() {
+    let value = document.querySelector("#nameInput").value;
+    document.getElementById("output").innerText = "querySelector: " + value;
+}
+
+// 3. getElementsByName
+function getByName() {
+    let value = document.getElementsByName("username")[0]?.value || "No name attr";
+    document.getElementById("output").innerText = "getElementsByName: " + value;
+}
+
+// ---------------- jQuery METHODS ----------------
+
+$(document).ready(function(){
+
+    // .val()
+    $("#jqVal").click(function(){
+        let value = $("#nameInput").val();
+        $("#output").text("jQuery .val(): " + value);
+    });
+
+    // .text()
+    $("#jqText").click(function(){
+        let value = $("#nameInput").val();
+        $("#output").text("jQuery .text(): " + value);
+    });
+
+    // .html()
+    $("#jqHtml").click(function(){
+        let value = $("#nameInput").val();
+        $("#output").html("<b>jQuery .html(): " + value + "</b>");
+    });
+
+});
+
+</script>
+
 </body>
 </html>

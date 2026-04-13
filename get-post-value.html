@@ -3,167 +3,72 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GET POST VALUE</title>
+<title>Input Value Demo</title>
+
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <style>
 body {
-    margin: 0;
-    background: #f8fafc;
     font-family: Arial;
+    background: #f1f5f9;
+    margin: 0;
 }
 .container {
-    max-width: 900px;
-    margin: 40px auto;
+    max-width: 800px;
+    margin: 50px auto;
     background: white;
     padding: 30px;
-    border-radius: 12px;
+    border-radius: 16px;
 }
-pre {
-    background: #f3f4f6;
-    padding: 15px;
-    border-radius: 8px;
+input, button {
+    padding: 10px;
+    margin-top: 10px;
 }
-input, button, select {
-    padding: 8px;
-    margin: 5px 0;
-}
-hr {
-    margin: 30px 0;
+.result {
+    margin-top: 20px;
+    padding: 10px;
+    background: #e2e8f0;
 }
 </style>
+
 </head>
 
 <body>
+
 <div class="container">
+    <h1>Input Value Demo (.val & .text)</h1>
 
-<h1>GET, POST & DOM Methods</h1>
+    <!-- Input -->
+    <input type="text" id="nameInput" placeholder="Enter your name">
 
-<p><strong>Definition:</strong> Form se data lene aur DOM se value, text, attribute nikalne ke liye JS methods use hote hain.</p>
+    <br>
 
-<hr>
+    <!-- Buttons -->
+    <button id="getVal">Get Value (.val)</button>
+    <button id="setText">Show with .text()</button>
 
-<!-- VALUE -->
-<h2>1. Value (.value)</h2>
-
-<input type="text" id="nameInput" placeholder="Enter name">
-<button onclick="getValue()">Get Value</button>
-
-<pre><code>
-let value = document.getElementById("nameInput").value;
-</code></pre>
-
-<hr>
-
-<!-- GET -->
-<h2>2. GET Method</h2>
-
-<form method="GET">
-    <input type="text" name="username" placeholder="Enter name">
-    <button type="submit">Send GET</button>
-</form>
-
-<p>👉 URL me data dikhega</p>
-
-<hr>
-
-<!-- POST -->
-<h2>3. POST Method</h2>
-
-<form onsubmit="handlePost(event)">
-    <input type="text" id="postName" placeholder="Enter name">
-    <button type="submit">Send POST</button>
-</form>
-
-<hr>
-
-<!-- FETCH -->
-<h2>4. Fetch API (POST)</h2>
-
-<button onclick="sendData()">Send Data</button>
-
-<hr>
-
-<!-- ATTR -->
-<h2>5. Attribute (.getAttribute)</h2>
-
-<img id="img" src="https://via.placeholder.com/100" alt="demo">
-<button onclick="getAttr()">Get Image Src</button>
-
-<hr>
-
-<!-- TEXT -->
-<h2>6. Text (.innerText)</h2>
-
-<p id="textPara">Hello Sandeep</p>
-<button onclick="getText()">Get Text</button>
-
-<hr>
-
-<!-- HTML -->
-<h2>7. HTML (.innerHTML)</h2>
-
-<div id="htmlBox"><b>Bold Text</b></div>
-<button onclick="getHTML()">Get HTML</button>
-
-<hr>
-
-<h2>Practice Tasks</h2>
-<ol>
-<li>Input value console me print karo</li>
-<li>Image ka src nikalo</li>
-<li>Text aur HTML difference check karo</li>
-<li>POST data console me dekho</li>
-</ol>
-
+    <!-- Output -->
+    <div class="result" id="output">Output yahan dikhega...</div>
 </div>
 
 <script>
 
-// VALUE
-function getValue() {
-    let value = document.getElementById("nameInput").value;
-    alert(value);
-}
+$(document).ready(function(){
 
-// POST
-function handlePost(e) {
-    e.preventDefault();
-    let value = document.getElementById("postName").value;
-    console.log("POST:", value);
-}
+    // .val() → input ki value lene ke liye
+    $("#getVal").click(function(){
+        let name = $("#nameInput").val();
+        alert("Value: " + name);
+    });
 
-// FETCH POST
-function sendData() {
-    fetch("https://jsonplaceholder.typicode.com/posts", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            name: "Sandeep"
-        })
-    })
-    .then(res => res.json())
-    .then(data => console.log(data));
-}
+    // .text() → text set karne ke liye
+    $("#setText").click(function(){
+        let name = $("#nameInput").val();
+        $("#output").text("Hello " + name);
+    });
 
-// ATTRIBUTE
-function getAttr() {
-    let src = document.getElementById("img").getAttribute("src");
-    console.log(src);
-}
-
-// TEXT
-function getText() {
-    let text = document.getElementById("textPara").innerText;
-    console.log(text);
-}
-
-// HTML
-function getHTML() {
-    let html = document.getElementById("htmlBox").innerHTML;
-    console.log(html);
-}
+});
 
 </script>
 

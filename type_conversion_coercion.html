@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Type Conversion & Coercion</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f1f5f9;
+}
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+}
+h1 { margin-top: 0; }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 20px;
+    background: #f8fafc;
+}
+
+pre {
+    background: #0f172a;
+    color: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.table th, .table td {
+    border: 1px solid #cbd5e1;
+    padding: 10px;
+}
+
+.table th {
+    background: #e2e8f0;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Type Conversion & Type Coercion</h1>
+
+<p><b>JavaScript me data type change karne ke 2 tarike hote hain:</b></p>
+
+<ul>
+<li><b>1. Type Conversion (Explicit)</b></li>
+<li><b>2. Type Coercion (Implicit)</b></li>
+</ul>
+
+<!-- TABLE -->
+<h2>Difference Table</h2>
+
+<table class="table">
+<tr>
+<th>Type</th>
+<th>Meaning</th>
+<th>Control</th>
+</tr>
+
+<tr>
+<td>Type Conversion</td>
+<td>Manually type change karna</td>
+<td>Developer ke control me</td>
+</tr>
+
+<tr>
+<td>Type Coercion</td>
+<td>Automatic type change</td>
+<td>JavaScript automatically karta hai</td>
+</tr>
+
+</table>
+
+<!-- EXPLICIT -->
+<h2>1. Type Conversion (Explicit)</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>String to Number</h3>
+<pre><code>
+let x = "10";
+let num = Number(x);
+console.log(num); // 10
+</code></pre>
+</div>
+
+<div class="card">
+<h3>Number to String</h3>
+<pre><code>
+let x = 10;
+let str = String(x);
+console.log(str); // "10"
+</code></pre>
+</div>
+
+<div class="card">
+<h3>Boolean Conversion</h3>
+<pre><code>
+let val = 1;
+console.log(Boolean(val)); // true
+</code></pre>
+</div>
+
+<div class="card">
+<h3>parseInt / parseFloat</h3>
+<pre><code>
+parseInt("10.5");   // 10
+parseFloat("10.5"); // 10.5
+</code></pre>
+</div>
+
+</div>
+
+<!-- IMPLICIT -->
+<h2>2. Type Coercion (Implicit)</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>String + Number</h3>
+<pre><code>
+"5" + 2  // "52"
+</code></pre>
+</div>
+
+<div class="card">
+<h3>Number - String</h3>
+<pre><code>
+"5" - 2  // 3
+</code></pre>
+</div>
+
+<div class="card">
+<h3>Boolean Conversion</h3>
+<pre><code>
+true + 1  // 2
+false + 1 // 1
+</code></pre>
+</div>
+
+<div class="card">
+<h3>Equality (== vs ===)</h3>
+<pre><code>
+5 == "5"   // true
+5 === "5"  // false
+</code></pre>
+</div>
+
+</div>
+
+<!-- NOTES -->
+<h2>Important Notes</h2>
+
+<ul>
+<li>== value check karta hai (type ignore)</li>
+<li>=== value + type dono check karta hai</li>
+<li>+ operator string banata hai</li>
+<li>- operator number convert karta hai</li>
+</ul>
+
+<pre><code>
+console.log(typeof Number("10")); // number
+console.log(typeof ("5" + 1));    // string
+console.log(typeof ("5" - 1));    // number
+</code></pre>
+
+</div>
+
+</body>
+
+</html>
